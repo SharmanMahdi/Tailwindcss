@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layouts using Grid</title>
+    <link rel="stylesheet" href="./output.css">
+</head>
+<body class="dark:bg-gray-400 grid justify-center ">
+  <h1 class="grid justify-center font-medium m-4"> Responsive Layouts using Grid </h1><br>
+ <!-- Grid Layout for different screens -->
+ <!-- Two main ways of layout are 1. Equal portion 2. Non-equal portion -->
+ <!-- 1.Equal portion: -->
+<h2 class="grid justify-center font-medium m-2">Equal portion</h2>
+<div class="m-4 grid gap-4 sm:grid-cols-3">
+  <div class="min-h-[100px] rounded-lg shadow bg-amber-600 font-bold text-white p-4">Logo</div>
+  <div class="min-h-[100px] rounded-lg shadow bg-teal-500 font-bold text-white p-4">Navbar</div>
+  <div class="min-h-[100px] rounded-lg shadow bg-red-500 font-bold text-white p-4 ">Photo</div>
+</div> <br>
+<!-- The number of div's should be same as the "grid-cols-[2]" to make this layout work on small screens -->
+<!-- for mobile screens this seems too sticky so you need to hide either of the side layouts to make the web page readable
+we can simple do it by removing the first grid-cols-3 [grid-cols-3] and it works fine on small screens -->
+<!-- we can make four parts and many more by changing sm:grid-cols-3 to 4 -->
+
+<!-- Non-equal portion: -->
+<h2 class="grid justify-center font-medium m-2">Non-equal portion:</h2>
+<div class="m-4 grid grid-cols-1 gap-4 sm:grid-cols-12">
+  <div class="sm:col-span-2 min-h-[100px] rounded-lg shadow bg-amber-600 font-bold text-white p-4">Logo</div>
+  <div class="sm:col-span-10 min-h-[100px] rounded-lg shadow  bg-teal-500 font-bold text-white p-4">Navbar</div>
+  <!-- <div class="min-h-[100px] rounded-lg shadow bg-red-500"></div> -->
+</div><br>
+<h2 class="grid justify-center font-medium m-2">using three different layout's like Tailwind page or X</h2>
+<!-- using three different layout's like Tailwind page or X -->
+
+<div class="m-4 grid grid-cols-1 gap-4 sm:grid-cols-12">
+  <div class="sm:col-span-2 min-h-[100px] rounded-lg shadow bg-amber-600 font-bold text-white p-4 sm:block hidden">Getting started</div>
+  <div class="sm:col-span-8 min-h-[100px] rounded-lg shadow bg-teal-500 font-bold text-white p-4">Core concepts</div>
+  <div class="sm:col-span-2 min-h-[100px] rounded-lg shadow bg-red-500 font-bold text-white p-4 sm:block hidden">On this Page</div> 
+</div>
+<!-- use [sm:block hidden] to hide "On this page on small screens to make the website readable on small screens" 
+NOTE: Do the same on Getting started to hide the "Getting started" On this way to make the same layout as the Tailwind.
+-->
+
+</body>
+</html>
