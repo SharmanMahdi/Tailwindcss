@@ -1,0 +1,46 @@
+<!-- 
+Create a Donut Shape Using Tailwind CSS
+Instructions:
+
+Create a div element to represent the donut shape.
+
+Use Tailwind CSS utilities to:
+
+Make the div circular by applying equal width and height with w-40 h-40 or other sizes.
+
+Use the rounded-full class to give the element a circular shape.
+
+Apply a background color to the outer donut using classes like bg-red-500.
+
+Make the div circular by applying equal width and height with w-16 h-16 or other sizes.
+
+Use the rounded-full class to give the element a circular shape.
+
+Apply a background color to the inner circle using classes like bg-white.
+
+Add the Tailwind CSS CDN link in the <head> of your HTML:
+
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> 
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donut Shape</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="flex items-center justify-center min-h-screen">
+        <h1 class="text-2xl font-bold mx-4">Hi there! this is a donut shape.</h1>
+        <div class="relative">
+            
+            <div class="w-40 h-40 bg-red-500 rounded-full"></div>
+            <div class="absolute inset-0 m-4 bg-white rounded-full">
+                <p class="text-center p-8">Do you like donuts?</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
